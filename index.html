@@ -1,11 +1,8 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 * {
   box-sizing: border-box;
-  background-color: rgb(231, 231, 231);
 }
 
 body {
@@ -13,133 +10,96 @@ body {
   font-family: Arial;
 }
 
-/* The grid: Four equal columns that floats next to each other */
+.header {
+  text-align: center;
+  padding: 32px;
+}
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
 .column {
-  float: left;
-  width: 25%;
-  padding: 10px;
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
 }
 
-/* Style the images inside the grid */
 .column img {
-  opacity: 0.8; 
-  cursor: pointer; 
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
 }
 
-.column img:hover {
-  opacity: 1;
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
 }
 
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* The expanding image container */
-.container {
-  position: relative;
-  display: none;
-}
-
-/* Expanding image text */
-#imgtext {
-  position: absolute;
-  bottom: 15px;
-  left: 15px;
-  color: white;
-  font-size: 20px;
-}
-
-/* Closable button inside the expanded image */
-.closebtn {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  color: white;
-  font-size: 35px;
-  cursor: pointer;
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
 }
 </style>
-</head>
 <body>
 
+<!-- Header -->
 <div style="text-align:center">
   <h2>DESIGNS BY :</h2>
   <img src="LOGO copy.png" alt="">
 </div>
 
-<!-- The four columns -->
-<div class="row">
+<!-- Photo Grid -->
+<div class="row"> 
   <div class="column">
-    <img src="images/1.jpeg" alt="" style="width:100%" onclick="myFunction(this);">
+    <img src="/images/1.jpeg" style="width:100%">
+    <img src="/images/2.jpeg" style="width:100%">
+    <img src="/images/3.jpeg" style="width:100%">
+    <img src="/images/4.jpeg" style="width:100%">
+    <img src="/images/19.png" style="width:100%">
   </div>
   <div class="column">
-    <img src="images/2.jpeg" alt="" style="width:100%" onclick="myFunction(this);">
+    <img src="/images/5.jpeg" style="width:100%">
+    <img src="/images/6.jpeg" style="width:100%">
+    <img src="/images/7.jpeg" style="width:100%">
+    <img src="/images/8.png" style="width:100%">
+    <img src="/images/20.png" style="width:100%">
+  </div>  
+  <div class="column">
+    <img src="/images/9.png" style="width:100%">
+    <img src="/images/10.jpeg" style="width:100%">
+    <img src="/images/11.png" style="width:100%">
+    <img src="/images/12.png" style="width:100%">
+    <img src="/images/18.png" style="width:100%">
   </div>
   <div class="column">
-    <img src="images/3.jpeg" alt="" style="width:100%" onclick="myFunction(this);">
-  </div>
-  <div class="column">
-    <img src="images/4.jpeg" alt="" style="width:100%" onclick="myFunction(this);">
+    <img src="/images/13.png" style="width:100%">
+    <img src="/images/14.png" style="width:100%">
+    <img src="/images/15.png" style="width:100%">
+    <img src="/images/16.png" style="width:100%">
+    <img src="/images/17.jpeg" style="width:100%">
+    <img src="/images/21.png" style="width:100%">
   </div>
 </div>
-<div class="row2">
-    <div class="column">
-      <img src="images/5.jpeg" alt="" style="width:100%" onclick="myFunction(this);">
-    </div>
-    <div class="column">
-      <img src="images/6.jpeg" alt="" style="width:100%" onclick="myFunction(this);">
-    </div>
-    <div class="column">
-      <img src="images/7.jpeg" alt="" style="width:100%" onclick="myFunction(this);">
-    </div>
-    <div class="column">
-      <img src="images/8.png" alt="" style="width:100%" onclick="myFunction(this);">
-    </div>
-  </div>
-  <div class="row3">
-    <div class="column">
-      <img src="images/9.png" alt="" style="width:100%" onclick="myFunction(this);">
-    </div>
-    <div class="column">
-      <img src="images/10.jpeg" alt="" style="width:100%" onclick="myFunction(this);">
-    </div>
-    <div class="column">
-      <img src="images/11.png" alt="" style="width:100%" onclick="myFunction(this);">
-    </div>
-    <div class="column">
-      <img src="images/12.png" alt="" style="width:100%" onclick="myFunction(this);">
-    </div>
-  </div>
-  <div class="row4">
-    <div class="column">
-      <img src="images/13.png" alt="" style="width:100%" onclick="myFunction(this);">
-    </div>
-    <div class="column">
-      <img src="images/14.png" alt="" style="width:100%" onclick="myFunction(this);">
-    </div>
-    <div class="column">
-      <img src="images/15.png" alt="" style="width:100%" onclick="myFunction(this);">
-    </div>
-    <div class="column">
-      <img src="images/16.png" alt="" style="width:100%" onclick="myFunction(this);">
-    </div>
-  </div>
-  <div class="row4">
-    <div class="column">
-      <img src="images/17.jpeg" alt="" style="width:100%" onclick="myFunction(this);">
-    </div>
-    <div class="column">
-      <img src="images/18.png" alt="" style="width:100%" onclick="myFunction(this);">
-    </div>
-  </div>
- 
-<div class="container">
-  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
-  <img id="expandedImg" style="width:100%">
-  <div id="imgtext"></div>
+<div>
+    <h2 style="text-align: center;">Check out my UI/UX Projects too : </h2> 
+    <p  style="text-align: center;"><a href="https://www.figma.com/file/UbHSEG3FRU14lbtwQQQewT/Untitled?node-id=0%3A1">Food Delivery Website</a></p>
+    <p  style="text-align: center;"><a href="https://www.figma.com/file/c0x7JFe5kaIDDxPAUR9yMR/Untitled?node-id=0%3A1">E-Commerce Website</a></p>
+
 </div>
 
 </body>
